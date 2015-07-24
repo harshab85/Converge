@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F4011C701B61DEC600B90273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4011C6F1B61DEC600B90273 /* AppDelegate.swift */; };
-		F4011C721B61DEC600B90273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4011C711B61DEC600B90273 /* ViewController.swift */; };
 		F4011C751B61DEC600B90273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4011C731B61DEC600B90273 /* Main.storyboard */; };
 		F4011C771B61DEC600B90273 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4011C761B61DEC600B90273 /* Images.xcassets */; };
 		F4011C7A1B61DEC600B90273 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4011C781B61DEC600B90273 /* LaunchScreen.xib */; };
 		F4011C861B61DEC600B90273 /* convergeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4011C851B61DEC600B90273 /* convergeTests.swift */; };
+		F4011C911B61DFE200B90273 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4011C901B61DFE200B90273 /* PlannerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		F4011C6A1B61DEC600B90273 /* converge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = converge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4011C6E1B61DEC600B90273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4011C6F1B61DEC600B90273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4011C711B61DEC600B90273 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F4011C741B61DEC600B90273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4011C761B61DEC600B90273 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F4011C791B61DEC600B90273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F4011C7F1B61DEC600B90273 /* convergeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = convergeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4011C841B61DEC600B90273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4011C851B61DEC600B90273 /* convergeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = convergeTests.swift; sourceTree = "<group>"; };
+		F4011C901B61DFE200B90273 /* PlannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +77,8 @@
 		F4011C6C1B61DEC600B90273 /* converge */ = {
 			isa = PBXGroup;
 			children = (
+				F4011C8F1B61DF9F00B90273 /* planner */,
 				F4011C6F1B61DEC600B90273 /* AppDelegate.swift */,
-				F4011C711B61DEC600B90273 /* ViewController.swift */,
 				F4011C731B61DEC600B90273 /* Main.storyboard */,
 				F4011C761B61DEC600B90273 /* Images.xcassets */,
 				F4011C781B61DEC600B90273 /* LaunchScreen.xib */,
@@ -110,6 +110,14 @@
 				F4011C841B61DEC600B90273 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4011C8F1B61DF9F00B90273 /* planner */ = {
+			isa = PBXGroup;
+			children = (
+				F4011C901B61DFE200B90273 /* PlannerViewController.swift */,
+			);
+			name = planner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4011C721B61DEC600B90273 /* ViewController.swift in Sources */,
+				F4011C911B61DFE200B90273 /* PlannerViewController.swift in Sources */,
 				F4011C701B61DEC600B90273 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

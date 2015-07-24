@@ -1,25 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UhZ-Qd-E7f">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Make a plan-->
+        <scene sceneID="iWM-w7-ppZ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="planner_viewcontroller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UhZ-Qd-E7f" customClass="PlannerViewController" customModule="converge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="VAL-dO-XUw"/>
+                        <viewControllerLayoutGuide type="bottom" id="hdA-FN-Wzd"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="uAb-cQ-y3H">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3Q-PH-QcO">
+                                <rect key="frame" x="239" y="394" width="123" height="30"/>
+                                <state key="normal" title="Cancel and Notify">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="Y5l-ba-4uD">
+                                <rect key="frame" x="123" y="262" width="354" height="46"/>
+                                <date key="date" timeIntervalSinceReferenceDate="459402025.32126099">
+                                    <!--2015-07-24 03:40:25 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="473317140">
+                                    <!--2016-01-01 04:59:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123 Elm Street or University of Toronto" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="EGA-rY-BOJ">
+                                <rect key="frame" x="123" y="201" width="349" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EGA-rY-BOJ" secondAttribute="height" multiplier="349:30" id="Sng-nH-w6D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Sng-nH-w6D"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y5l-ba-4uD" firstAttribute="centerX" secondItem="r3Q-PH-QcO" secondAttribute="centerX" constant="-0.5" id="0me-TJ-3P5"/>
+                            <constraint firstItem="Y5l-ba-4uD" firstAttribute="top" secondItem="r3Q-PH-QcO" secondAttribute="bottom" constant="38" id="4FU-QU-Gm3"/>
+                            <constraint firstItem="EGA-rY-BOJ" firstAttribute="centerX" secondItem="Y5l-ba-4uD" secondAttribute="centerX" constant="-2.5" id="4XD-Op-S8G"/>
+                            <constraint firstItem="EGA-rY-BOJ" firstAttribute="trailing" secondItem="Y5l-ba-4uD" secondAttribute="trailing" constant="-5" id="IYX-wi-eAV"/>
+                            <constraint firstItem="r3Q-PH-QcO" firstAttribute="top" secondItem="Y5l-ba-4uD" secondAttribute="bottom" constant="86" id="IYk-6R-Db2"/>
+                            <constraint firstAttribute="centerX" secondItem="Y5l-ba-4uD" secondAttribute="centerX" id="JUH-st-g8e"/>
+                            <constraint firstAttribute="centerY" secondItem="Y5l-ba-4uD" secondAttribute="centerY" constant="15" id="MWC-F7-Sg0"/>
+                            <constraint firstItem="r3Q-PH-QcO" firstAttribute="centerX" secondItem="Y5l-ba-4uD" secondAttribute="centerX" constant="10.5" id="clV-cH-XDX"/>
+                            <constraint firstItem="Y5l-ba-4uD" firstAttribute="top" secondItem="EGA-rY-BOJ" secondAttribute="bottom" constant="31" id="e3d-Gt-aBF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IYX-wi-eAV"/>
+                                <exclude reference="4FU-QU-Gm3"/>
+                                <exclude reference="clV-cH-XDX"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Make a plan" id="U7b-YR-28V">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="lJz-E0-Nak"/>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xcf-cJ-FUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="926" y="216"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rPZ-Pi-cYY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2lT-rP-bY6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jp5-CU-lhz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UhZ-Qd-E7f" kind="relationship" relationship="rootViewController" id="0qX-Hy-bmi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egN-PD-wa3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="-472"/>
         </scene>
     </scenes>
 </document>
